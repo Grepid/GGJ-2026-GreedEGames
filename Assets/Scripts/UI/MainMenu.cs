@@ -1,3 +1,4 @@
+using AudioSystem;
 using UnityEngine;
 
 public class MainMenu : UIElement
@@ -10,6 +11,7 @@ public class MainMenu : UIElement
     public void StartGame()
     {
         GameplayManager.StartSession();
+        AudioManager.Play("TestSound1");
     }
     public void QuitGame()
     {
