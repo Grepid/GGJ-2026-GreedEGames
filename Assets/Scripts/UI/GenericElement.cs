@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class GenericElement : UIElement
 {
-    public override void CloseUI()
+    protected override void CloseUI()
     {
         
+    }
+
+    public static void QuitGame()
+    {
+        Application.Quit();
     }
 }

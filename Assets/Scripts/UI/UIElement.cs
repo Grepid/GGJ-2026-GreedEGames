@@ -9,7 +9,9 @@ public abstract class UIElement : MonoBehaviour
     public List<UIElement> DestructOnSpawned;
     private readonly List<Type> destructOnSpawnedTypes = new();
 
-    protected void Awake()
+    private List<UIElement> children = new();
+
+    protected virtual void Awake()
     {
         UIManager.RegisterElement(this);
         UIManager.OnNewElementSpawned += EnforceUptimeRequirements;
@@ -30,21 +32,45 @@ public abstract class UIElement : MonoBehaviour
     /// <summary>
     /// Run any closing Logic to safely and appropriately close the UI. Not to be called on its own
     /// </summary>
-    public abstract void CloseUI(); //I think make Protected and just have CloseSelf() call that
+    protected abstract void CloseUI();
 
     public void CloseSelf()
     {
-        UIManager.CloseElement(this);
+        UIManager.RemoveElement(this);
+        CloseUI();
     }
 
 
-    protected void OnDestroy()
+    protected virtual void OnDestroy()
     {
         if (UIManager.ElementRegistered(this))
         {
             print($"On destroy element was still registered");
             UIManager.DeregisterElement(this);
         }
+    }
+
+    public void CreateNewUI(string name)
+    {
+        UIElement el = UIManager.CreateElement(name);
+        if(el != null)
+        {
+            children.Add(el);
+        }
+    }
+    public void DestroyUI(UIElement element)
+    {
+        UIManager.CloseElement(element);
+    }
+
+    public void CollapseChildren()
+    {
+        foreach(UIElement el in children)
+        {
+            if(el == null) continue;
+            el.CollapseChildren();
+        }
+        UIManager.CloseElement(this);
     }
 }
 

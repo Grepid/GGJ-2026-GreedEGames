@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c5ea1fec20889d64ea0db51b074668fe
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 658a948eba79a2c4c9c6c1f55362dac8
+  - enabled: 1
+    path: Assets/Scenes/GameplayPersistentScene.unity
+    guid: 57e9f863a31a5c240a93ccaf9eb7be88
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

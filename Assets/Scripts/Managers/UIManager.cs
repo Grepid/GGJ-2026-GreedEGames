@@ -14,7 +14,7 @@ public class UIManager : Singleton<UIManager>
 
     public static event Action<UIElement> OnNewElementSpawned;
 
-    protected void Awake()
+    protected override void Awake()
     {
         base.Awake();
         
@@ -62,7 +62,7 @@ public class UIManager : Singleton<UIManager>
     {
         //Run a close sequence all UIElements implement
         if (element == null) return;
-        element.CloseUI();
+        element.CloseSelf();
         RemoveElement(element);
     }
 
