@@ -119,6 +119,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &521564231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521564233}
+  - component: {fileID: 521564232}
+  m_Layer: 0
+  m_Name: OrderEventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &521564232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521564231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ebaf7e6511a1b4d9acba25d5480b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrderEventManager
+  MaterialOrderEvents:
+  - {fileID: 11400000, guid: ffb5f2190519e97488201bc34be07d8c, type: 2}
+  - {fileID: 11400000, guid: 06f73fae32f0c5e4e8c0ae686018d9b7, type: 2}
+  - {fileID: 11400000, guid: 13e22dadb0121e04d95e4d3c8046e0b9, type: 2}
+  CurrentMaterialOrderEvent: {fileID: 0}
+  FashionableOrderEvents:
+  - {fileID: 11400000, guid: f75b4a49d5f0d914488c675dd19fd802, type: 2}
+  - {fileID: 11400000, guid: 2561ec3d24befdc489b86853ac3291d2, type: 2}
+  - {fileID: 11400000, guid: 46fcf852e5dd840459e4b4cb1000cb6a, type: 2}
+  CurrentFashionableOrderEvent: {fileID: 0}
+--- !u!4 &521564233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521564231}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732158563
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,3 +360,4 @@ SceneRoots:
   - {fileID: 4136462097030238619}
   - {fileID: 732158564}
   - {fileID: 6663771353608140503}
+  - {fileID: 521564233}

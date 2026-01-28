@@ -16,6 +16,7 @@ public static class CustomerOrderGenerator
         
     };
 
+    #region Sentences
     public static readonly Dictionary<OrderDifficulty, Dictionary<Mask.Base, List<string>>> MaskBaseRequests = new()
     {
         //All Easy Mask Base lines
@@ -270,4 +271,11 @@ public static class CustomerOrderGenerator
             }
         }
     };
+    #endregion
+
+    //Todo
+    public static CustomerOrder GenerateRandomOrder()
+    {
+        return null;
+    }
 }
